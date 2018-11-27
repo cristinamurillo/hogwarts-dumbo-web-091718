@@ -30,13 +30,13 @@ class HogTileCont extends React.Component{
                 }
             }
         }
-        //fix for weight
+   
         sortableArray.sort((a,b)=> {
             if (a[0] < b[0]) return -1
             else if (a[0] > b[0]) return 1
             return 0
         })
-
+      
         this.setState({
             displayHogs: sortableArray.map(hogInfo => hogInfo[1])
         })
@@ -46,6 +46,9 @@ class HogTileCont extends React.Component{
         return(
         <div>
             <Form formHandler ={this.formHandler} />
+            <br/>
+            <hr/>
+            <br/>
             <HogList hogs={this.state.displayHogs}/>
        </div>
         )

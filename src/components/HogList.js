@@ -8,7 +8,7 @@ const HogList = (props) => {
     )
 
     return(
-        <div>
+        <div className="ui three stackable cards">
             {hogList}
         </div>
     )
